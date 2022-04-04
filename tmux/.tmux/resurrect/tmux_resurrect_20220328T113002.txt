@@ -1,0 +1,17 @@
+pane	ST	0	1	:*	0	:/Users/quentin/Github/mono/web/apps/socialtrading-ui	1	zsh	:
+pane	ST	1	0	:	0	:/Users/quentin/Github/mono/web/libs/socialtrading-widget	1	zsh	:
+pane	ST	2	0	:	0	:/Users/quentin/Github/mono/web/libs/socialtrading-theme	1	zsh	:
+pane	git	0	1	:*	0	:/Users/quentin/Github/mono/web	0	bash	:/bin/bash /Users/quentin/Github/mono/tools/bin/mono start -p mainuc-kyc-ui
+pane	git	0	1	:*	1	:/Users/quentin/Github/mono	1	tig	:tig reflog
+pane	git	0	1	:*	2	:/Users/quentin/Github/mono	0	zsh	:
+pane	git	1	0	:-	0	:/Users/quentin/Github/mono	1	zsh	:
+pane	git	2	0	:	0	:/Users/quentin	1	zsh	:
+pane	kyc	0	1	:*	0	:/Users/quentin/Github/mono/web/apps/mainuc-kyc-ui	1	zsh	:
+window	ST	0	:st-ui	1	:*	d3fe,316x78,0,0,1	off
+window	ST	1	:st-widget	0	:	d3ff,316x78,0,0,2	off
+window	ST	2	:zsh	0	:	d400,316x78,0,0,3	off
+window	git	0	:KYC	1	:*	5adc,316x78,0,0{158x78,0,0,4,157x78,159,0[157x39,159,0,9,157x38,159,40,10]}	off
+window	git	1	:ST	0	:-	d402,316x78,0,0,5	off
+window	git	2	:personal	0	:	d403,316x78,0,0,6	off
+window	kyc	0	:mainuc	1	:*	d404,316x78,0,0,7	off
+state	git	
