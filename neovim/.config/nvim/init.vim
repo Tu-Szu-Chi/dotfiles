@@ -28,6 +28,19 @@ set termguicolors " this variable must be enabled for colors to be applied prope
 set shell=/bin/bash
 " Default to system clipboard
 set clipboard+=unnamedplus
+"Status Line
+set statusline=
+set statusline+=%#TabLineFill#
+set statusline+=%=
+set statusline+=\ %f
+set statusline+=\ 
+set statusline+=%#TabLineSel#
+set statusline+=\ [%l/%L
+set statusline+=
+set statusline+=%#IncSearch#
+set statusline+=\ %p%%]
+set statusline+=\ {%n}
+
 call plug#begin('~/.vim/plugged')
 " Need to install 'brew install ripgrep'
 Plug 'nvim-telescope/telescope.nvim'
@@ -58,11 +71,10 @@ Plug 'tpope/vim-commentary'
 call plug#end()
 
 let mapleader = " "
-"nnoremap <leader>ps :Telescope find_files<CR>
-"nnoremap <leader>fs :lua require('telescope.builtin').grep_string({ search = vim.fn.input("Grep For > ")})<CR>
 nnoremap <Leader>o o<Esc>
 nnoremap <Leader>O O<Esc>
 nnoremap <leader>fs :Telescope live_grep<CR>
+nnoremap <leader>Fs :Telescope live_grep search_dirs=[]
 nnoremap <leader>ps :Telescope find_files<CR>
 nnoremap <leader>ws :lua require('telescope.builtin').grep_string { search = vim.fn.expand("<cword>") }<CR>
 nnoremap <leader>rl :source $MYVIMRC<CR>
