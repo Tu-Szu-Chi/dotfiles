@@ -7,6 +7,7 @@ let g:coc_global_extensions = [
 \ 'coc-vetur',
 \ 'coc-json',
 \ 'coc-prettier',
+\ 'coc-css',
 \ ]
 " 太長的更新間隔會導致明顯的延遲並降低使用者體驗（預設是 4000 ms = 4s ）
 set updatetime=200

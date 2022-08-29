@@ -7,8 +7,8 @@ set shiftwidth=2
 set expandtab
 
 "Indent
-set noautoindent
-set cindent
+set autoindent
+set smartindent
 
 set wildignore+=**/node_modules/*
 set wildignore+=**/.git/*
@@ -97,3 +97,10 @@ nmap <leader>all gg<S-v>G
 " Split window
 nmap ss :split<Return><C-w>w
 nmap sv :vsplit<Return><C-w>w
+" Better tabbing
+vnoremap < <gv
+vnoremap > >gv
+" Delete without copy
+vnoremap d "_d
+" No highlight
+nnoremap <Leader>nh :noh<CR>
