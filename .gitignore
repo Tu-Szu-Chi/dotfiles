@@ -1,1 +1,2 @@
 tmux/.tmux/resurrect/
+**/node_modules/
