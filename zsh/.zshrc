@@ -1,12 +1,9 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-#Jump command
-
-eval "$(jump shell)"
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
-export PATH=$PATH:/Users/quentin/Github/mono/tools/bin:/Users/quentin/bin:/usr/local/mysql/bin:/Users/quentin/Downloads/homebrew/opt/python/libexec/bin
+export PATH=$PATH:/Users/quentin/Github/mono/tools/bin:/Users/quentin/bin:/usr/local/mysql/bin:/Users/quentin/Downloads/homebrew/opt/python/libexec/bin:/Users/quentin/Downloads/homebrew/bin
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 # Set name of the theme to load --- if set to "random", it will
@@ -111,4 +108,4 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-
+ alias ohmyzsh="mate ~/.oh-my-zsh"
