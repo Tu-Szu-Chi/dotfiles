@@ -1,3 +1,5 @@
+Remember install each tools first, than run below command
+
 # Install everything at once
 ```bash
 stow --verbose --target=$HOME --restow */
