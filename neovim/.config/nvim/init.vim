@@ -101,6 +101,7 @@ nmap sv :vsplit<Return><C-w>w
 vnoremap < <gv
 vnoremap > >gv
 " Delete without copy
+nnoremap d "_d
 vnoremap d "_d
 " No highlight
 nnoremap <Leader>nh :noh<CR>

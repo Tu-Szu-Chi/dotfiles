@@ -1,0 +1,59 @@
+set number relativenumber
+set idearefactormode=keep
+set ideajoin
+set surround
+set easymotion
+
+let mapleader = " "
+map Q gq
+"Line movement
+nnoremap <A-Down> :m+<CR>
+nnoremap <A-Up> :m-2<CR>
+inoremap <A-Up> <Esc>:m-2<CR>
+inoremap <A-Down> <Esc>:m+<CR>
+vnoremap <A-Up> :<C-u>silent! '<,'>move-2<CR>gv=gv 
+vnoremap <A-Down> :<C-u>silent! '<,'>move'>+<CR>gv=gv
+" Select all
+nmap <leader>all gg<S-v>G
+" Better tabbing
+vnoremap < <gv
+vnoremap > >gv
+
+" IDEA
+:map <CR> <Action>(EditorSelectWord)
+:map <BS> <Action>(EditorUnSelectWord)
+" system clipboard
+vmap <leader>y "+y
+vmap <leader>d "+d
+nmap <leader>y "+yy
+nmap <leader>p "+p
+nmap <leader>P "+P
+vmap <leader>p "+p
+vmap <leader>P "+P
+" tab
+nmap <leader>b <action>(PreviousTab)
+nmap <leader>n <action>(NextTab)
+" File
+nmap <leader>i <action>(Generate)
+nmap <leader>/ <action>(ShowErrorDescription)
+nmap <leader>e <action>(GotoNextError)
+
+"Rename
+nmap <leader>rn <action>(RenameElement)
+"Split right
+map <leader>sv <action>(SplitVertically)
+"Split down
+map <leader>ss <action>(SplitHorizontally)
+
+map <leader>fs <action>(FindInPath)
+map <leader>ps <action>(GotoFile)
+map <leader>cs <action>(GotoClass)
+
+nmap <leader>rf <action>(FindUsages)
+
+map <C-o> <action>(Back)
+
+nmap zx <action>(ExpandRegion)
+" Delete
+nnoremap d "_d
+vnoremap d "_d

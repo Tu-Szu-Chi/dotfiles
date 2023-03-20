@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Jetbrand">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/fonts/Jetbrand.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
