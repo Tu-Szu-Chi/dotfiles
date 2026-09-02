@@ -1,3 +1,5 @@
+let mapleader = " "
+
 syntax on
 colorscheme jellybeans
 set background=dark
@@ -28,6 +30,13 @@ set termguicolors " this variable must be enabled for colors to be applied prope
 set shell=/bin/bash
 " Default to system clipboard
 set clipboard+=unnamedplus
+
+" Folding settings (IDEA style zc/zx)
+set foldmethod=indent
+set foldlevel=99
+set foldlevelstart=99
+nnoremap zx zo
+
 "Status Line
 set statusline=
 set statusline+=%#TabLineFill#
@@ -68,9 +77,11 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'akinsho/bufferline.nvim'
 "Comment out
 Plug 'tpope/vim-commentary'
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npx --yes yarn install' }
 call plug#end()
 
-let mapleader = " "
+" Keybindings
+nnoremap <leader>md :MarkdownPreview<CR>
 nnoremap <Leader>o o<Esc>
 nnoremap <Leader>O O<Esc>
 nnoremap <leader>fs :Telescope live_grep<CR>
@@ -85,6 +96,9 @@ inoremap <A-Up> <Esc>:m-2<CR>
 inoremap <A-Down> <Esc>:m+<CR>
 vnoremap <A-Up> :<C-u>silent! '<,'>move-2<CR>gv=gv 
 vnoremap <A-Down> :<C-u>silent! '<,'>move'>+<CR>gv=gv
+
+" Rename function/variable (Space + rn)
+nmap <leader>rn <Plug>(coc-rename)
 
 " Delete all buffers expect current
 nnoremap <leader>y "*y
@@ -105,3 +119,15 @@ nnoremap d "_d
 vnoremap d "_d
 " No highlight
 nnoremap <Leader>nh :noh<CR>
+
+" 開啟自動讀取
+set autoread
+
+" 當回到 Neovim 視窗或切換 Buffer 時，自動觸發檢查磁碟檔案變動
+augroup CheckFileChange
+    autocmd!
+    autocmd FocusGained,BufEnter,CursorHold,CursorHoldI * if mode() != 'c' | checktime | endif
+augroup END
+
+" 當檔案被重新載入後，可以選擇性地噴一個簡單的通知 (非必須)
+autocmd FileChangedShellPost * echohl WarningMsg | echo "File changed on disk. Buffer reloaded." | echohl None

@@ -1,0 +1,6 @@
+keybind = super+shift+c=copy_to_clipboard
+keybind = super+shift+v=paste_from_clipboard
+term = xterm-256color
+
+scrollback-limit = 67108864
+image-storage-limit = 33554432

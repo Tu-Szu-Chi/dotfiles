@@ -1,6 +1,7 @@
 let g:coc_global_extensions = [
 \ 'coc-eslint',
 \ 'coc-tsserver',
+\ 'coc-pyright',
 \ 'coc-html',
 \ 'coc-highlight',
 \ 'coc-snippets',
